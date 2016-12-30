@@ -16,8 +16,13 @@ get "/" do
   erb :welcome
 end
 
+get "new" do
+  erb :new
+end
+
 get "/:title" do
   @title = params[:title]
   @content =  page_content(@title)
   erb :show
 end
+
